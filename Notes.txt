@@ -1,0 +1,33 @@
+O que são funções variadicas? 
+R: São funções que podem receber um numero ilimitado de parametros e sabem lidar com todos eles
+
+Operadores de atribuição e declaração
+R: O operador de atribuição é o caractere "=" como em outras linguagens
+No GO temos um operador de declaração ":=" (também conhecido como marmota) isso signigica que estamos criando uma variavel e o GO deve identificar o tipo de dados para tipar a variavel automaticamente.
+Obs1.: A Marmota só pode ser usado em um codeblock, ou seja, dentro de um escopo de abrangencia
+Obs2.: Para fazer deplarações a nivel de packege (Variavel global) não é possivel utilizar a marmota e sim utilizar a palavra reservada var
+
+O que é uma expressão?
+R: Toda opeação que produz um resultado, por ex: 
+ 10 + 10: 20
+ 10 < 10: false
+
+O que pe um statment: 
+R: É um conjunto de expressões, como por exemplo: 
+resultado := 10 + 10
+
+O que é valor Zero?
+R: É o valor que cada variavel assume por padrão quando ela é declarada e ainda não possui nenhum valor.
+
+Cada tipo primitivo (int, bool, string, float64) possui um valor zero diferente
+
+Diferença entre função variadica e desdobrar indices de um slice?
+R: Quando utilizamos os três pontos "..." ANTES de um parâmetro de uma função, dizemos que aquele parametro pode receber um numero ilimitado daquele parametro, ou seja, função variadica.
+
+Quando utilizamos "..." após um slice, dizemos que queremos passar por parametro todos os elementos contidos no slice e não o slice em sí. Ex: 
+ novo_slice := append(slice_antigo, slice_novo...)
+Neste caso cada elemento do slice_novo será adicionado aos elementos do slice_antigo que serão atribuidos no novo_slice
+
+
+O que é "comme ok"?
+R: Essa funcionalidade foi inventada para distinguir um Zero value e um valor inexistente. Para verificar se uma key dentro de um map existe por exemplo, tendo em vista que se você acessar uma key que não existe dentro de um map ele retorna o Zero value do tipo desse map
