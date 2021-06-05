@@ -31,3 +31,7 @@ Neste caso cada elemento do slice_novo será adicionado aos elementos do slice_a
 
 O que é "comme ok"?
 R: Essa funcionalidade foi inventada para distinguir um Zero value e um valor inexistente. Para verificar se uma key dentro de um map existe por exemplo, tendo em vista que se você acessar uma key que não existe dentro de um map ele retorna o Zero value do tipo desse map
+
+Se tratando de JSON, qual a diferença entre Marshal/Unmarshal e Enconde/Decode? 
+ - Ambas servem para transformar structs em json e vise versa, porém com Marshal eu tenho a possibilidade de obter o resultado da conversão e salvar em uma variavel. Já o Enconde/Decode eu preciso passar uma interface de Writer como um argumento na conversão, assim o resultado da conversão irá direto para a interface fornecida.
+- A vantagem com o Encode/Decode é a economia de memória, pois o resultado da conversão vai direto para a interface Writer sem a necessidade de uma váriavel intermedirária. Já com Marshal/Unmarshal eu preciso gravar os dados em uma variavel, em uma situação com alto volume de dados, teremos sempre uma duplicidade de informação na memoria, haja vista que o Go utiliza sempre o conceito de (pass by value).
