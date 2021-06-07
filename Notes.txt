@@ -1,20 +1,28 @@
 O que são funções variadicas? 
 R: São funções que podem receber um numero ilimitado de parametros e sabem lidar com todos eles
 
+
+
 Operadores de atribuição e declaração
 R: O operador de atribuição é o caractere "=" como em outras linguagens
 No GO temos um operador de declaração ":=" (também conhecido como marmota) isso signigica que estamos criando uma variavel e o GO deve identificar o tipo de dados para tipar a variavel automaticamente.
 Obs1.: A Marmota só pode ser usado em um codeblock, ou seja, dentro de um escopo de abrangencia
 Obs2.: Para fazer deplarações a nivel de packege (Variavel global) não é possivel utilizar a marmota e sim utilizar a palavra reservada var
 
+
+
 O que é uma expressão?
 R: Toda opeação que produz um resultado, por ex: 
  10 + 10: 20
  10 < 10: false
 
+
+
 O que pe um statment: 
 R: É um conjunto de expressões, como por exemplo: 
 resultado := 10 + 10
+
+
 
 O que é valor Zero?
 R: É o valor que cada variavel assume por padrão quando ela é declarada e ainda não possui nenhum valor.
@@ -29,9 +37,18 @@ Quando utilizamos "..." após um slice, dizemos que queremos passar por parametr
 Neste caso cada elemento do slice_novo será adicionado aos elementos do slice_antigo que serão atribuidos no novo_slice
 
 
+
 O que é "comme ok"?
 R: Essa funcionalidade foi inventada para distinguir um Zero value e um valor inexistente. Para verificar se uma key dentro de um map existe por exemplo, tendo em vista que se você acessar uma key que não existe dentro de um map ele retorna o Zero value do tipo desse map
 
 Se tratando de JSON, qual a diferença entre Marshal/Unmarshal e Enconde/Decode? 
  - Ambas servem para transformar structs em json e vise versa, porém com Marshal eu tenho a possibilidade de obter o resultado da conversão e salvar em uma variavel. Já o Enconde/Decode eu preciso passar uma interface de Writer como um argumento na conversão, assim o resultado da conversão irá direto para a interface fornecida.
 - A vantagem com o Encode/Decode é a economia de memória, pois o resultado da conversão vai direto para a interface Writer sem a necessidade de uma váriavel intermedirária. Já com Marshal/Unmarshal eu preciso gravar os dados em uma variavel, em uma situação com alto volume de dados, teremos sempre uma duplicidade de informação na memoria, haja vista que o Go utiliza sempre o conceito de (pass by value).
+
+
+Importante documento para entender alguma convensões em Go importantes, escrito por uma colaboradora do Google que participou da criação da linguagem:
+https://rakyll.org/style-packages/
+
+
+
+
